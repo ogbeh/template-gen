@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter One</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="js/chap1.js"></script>
+    <style>
+        .w3-myFont {
+            font-family: "Times New Roman", cursive, sans-serif;
+            font-size: 36px;
+        }</style>
+
+</head>
+<body>
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button>
+    <a href="index.html" class="w3-bar-item w3-button">Cover Page</a>
+    <a href="chap1.html" class="w3-bar-item w3-button">Chapter One</a>
+    <a href="chap2.html " class="w3-bar-item w3-button">Chapter Two</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Three</a>
+</div>
+
+<div id="main">
+
+    <div class="w3-black">
+        <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1 class="w3-center">My Project</h1>
+        </div>
+    </div>
+<form class="w3-input">
+    <input placeholder="back" class="back-box w3-padding-32" type="text"><br>
+    <input placeholder="stat" class="stat-box w3-padding-32" type="text">
+    <input type="submit">
+</form>
+
+<form class="w3-input">
+
+    <!--<input type="submit">-->
+</form>
+<div class="w3-container">
+    <h1 class="w3-center w3-myFont">Background of Study</h1>
+    <p class="p1"></p>
+</div>
+
+
+<div class="w3-container">
+    <h1 class="w3-myFont w3-center">Statement of Problem</h1>
+    <p class="p2"></p>
+</div>
+</div>
+</body>
+</html>
