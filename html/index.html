@@ -44,17 +44,25 @@
     </div>
 
 
-    <div class="w3-container">
-        <form class="w3-input">
-            Title: <input placeholder="Title:"
-                          class="title-box w3-padding-16" ng-model="title" type="text">
-            By: <input placeholder="By:"
-                       class="by-box w3-padding-16" type="text" ng-model="by">
-            Submitted To: <input placeholder="Submitted to:"
-                                 class="sub-box w3-padding-16" type="text" ng-model="sub">
-            Date: <input placeholder="Date:"
-                         class="date-box" type="date" ng-model="">
-            <input type="submit" value="Generate">
+    <div class="w3-card-4">
+        <div class="w3-container w3-gray">
+            <h2 class="w3-center">COVER PAGE</h2>
+        </div>
+
+        <form class="w3-container">
+
+            <label>Title</label>
+            <input placeholder="Title:" class="title-box w3-input" ng-model="title" type="text">
+
+            <label>By</label>
+            <input placeholder="By:" class="by-box w3-input" type="text" ng-model="by">
+
+            <label>Submitted To</label>
+            <input placeholder="Submitted to:" class="sub-box w3-input" type="text" ng-model="sub">
+
+            <label>Date</label>
+            <input placeholder="Date:" class="date-box w3-input" type="date" ng-model="">
+
         </form>
     </div>
     <div class="w3-container w3-border w3-border-black">
