@@ -8,6 +8,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/main.js"></script>
     <style>
         .w3-myFont {
             font-family: "Times New Roman", cursive, sans-serif;
@@ -45,22 +46,24 @@
             <div class="w3-container w3-gray">
                 <h2 class="w3-center"><strong>CHAPTER TWO</strong></h2>
             </div>
-            <form class="w3-container">
+
+            <!--Chapter Two Input-->
+            <form id="ch2_input" class="w3-container">
                 <label>Literature Review</label>
-            <input placeholder="Lit" class="back-box w3-input" type="text" ng-model="lit">
+                <input placeholder="Lit" class="back-box w3-input" type="text" ng-model="lit">
 
-             <label>Title</label>
-            <input placeholder="stat" class="stat-box w3-input" type="text">
+                <label>Title</label>
+                <input placeholder="stat" class="stat-box w3-input" type="text">
 
-            <!--<input placeholder="tit1" type="text" ng-model="tit1">
-            <input placeholder="tit2" type="text" ng-model="tit2">
-            <input placeholder="tit3" type="text" ng-model="tit3">-->
-        </form>
 
-        <form class="w3-input">
+                <!--<input placeholder="tit1" type="text" ng-model="tit1">
+                <input placeholder="tit2" type="text" ng-model="tit2">
+                <input placeholder="tit3" type="text" ng-model="tit3">-->
+            </form>
 
-            <!--<input type="submit">-->
-        </form>
+            <!--Add Heading Button-->
+            <button id="headed" class="w3-button w3-margin" onclick="newHead()">Add New Heading</button>
+
         </div>
 
         <div class="w3-container w3-section">
@@ -68,18 +71,18 @@
             <p class="p1" ng-bind="lit"></p>
         </div>
 
-      <!--  <div class="w3-container">
-            <h1 class="w3-myFont w3-center" ng-bind="tit1">Title 1</h1>
-            <p class="p2"></p>
-        </div>
-        <div class="w3-container">
-            <h1 class="w3-myFont w3-center" ng-bind="tit2">Title 2</h1>
-            <p class="p2"></p>
-        </div>
-        <div class="w3-container">
-            <h1 class="w3-myFont w3-center" ng-bind="tit3">Title 3</h1>
-            <p class="p2"></p>
-        </div>-->
+        <!--  <div class="w3-container">
+              <h1 class="w3-myFont w3-center" ng-bind="tit1">Title 1</h1>
+              <p class="p2"></p>
+          </div>
+          <div class="w3-container">
+              <h1 class="w3-myFont w3-center" ng-bind="tit2">Title 2</h1>
+              <p class="p2"></p>
+          </div>
+          <div class="w3-container">
+              <h1 class="w3-myFont w3-center" ng-bind="tit3">Title 3</h1>
+              <p class="p2"></p>
+          </div>-->
 
     </div>
 
