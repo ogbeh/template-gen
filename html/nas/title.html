@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--JQUERY SCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <!--ANGULAR.JS SCRIPT-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    </script>
+    <!--//LOCAL JAVASCRIPT-->
+    <!--//THE SIDEBAR JS FILE-->
+    <script src="../../js/sidebar.js"></script>
+    <!--//STYLESHEET-->
+    <link rel="stylesheet" href="../../css/w3.css">
+    <!--//TIMES NEW ROMAN FONT STYLE-->
+    <style>
+        .w3-myFont {
+            font-family: "Times New Roman", cursive, sans-serif;
+            font-size: 36px;
+        }</style>
+</head>
+<body>
+<!--//SIDEBAR-->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;
+    </button>
+    <a href="title.html" class="w3-bar-item w3-button">Cover Page</a>
+    <a href="approval.html" class="w3-bar-item w3-button">Approval</a>
+    <a href="chap1.html" class="w3-bar-item w3-button">Chapter One</a>
+    <a href="chap2.html" class="w3-bar-item w3-button">Chapter Two</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Three</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Four</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Five</a>
+</div>
+<!--//ANGULAR APPLICATION-->
+<div ng-app="ngLocale" id="main">
+    <div class="w3-black">
+        <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1 class="w3-center">Project Template Generator</h1>
+        </div>
+    </div>
+
+
+    <div class="w3-card-4">
+        <div class="w3-container w3-gray">
+            <h2 class="w3-center">COVER PAGE</h2>
+        </div>
+
+        <form class="w3-container">
+
+            <label>Title</label>
+            <input placeholder="Title:" class="title-box w3-input" ng-model="title" type="text">
+
+            <label>By</label>
+            <input placeholder="By:" class="by-box w3-input" type="text" ng-model="by">
+
+            <label>Submitted To</label>
+            <input placeholder="Submitted to:" class="sub-box w3-input" type="text" ng-model="sub">
+
+            <label>Date</label>
+            <input placeholder="Date:" class="date-box w3-input" type="date" ng-model="">
+
+        </form>
+    </div>
+    <div class="w3-container w3-border w3-border-black">
+
+        <h1 class="p-title w3-center w3-myFont" ng-bind="title">Title:</h1>
+
+        <h1 class="w3-center w3-myFont"><strong>By: </strong></h1>
+        <h1 class="w3-center p-by w3-myFont" ng-bind="by"></h1>
+
+        <h1 class="w3-myFont w3-center"><strong>Submitted to:</strong></h1>
+        <h1 class="w3-center p-sub w3-myFont" ng-bind="sub">Submitted to:</h1>
+
+        <h1 class="w3-center w3-myFont"><strong>Date: </strong></h1>
+        <h1 class="w3-center p-date w3-myFont" ng-bind="date.toString()">Date:</h1>
+    </div>
+</div>
+</body>
+</html>
