@@ -9,3 +9,5 @@ function newHead() {
     let form = document.getElementById("ch2_input");
     form.appendChild(inp);
 }
+
+
