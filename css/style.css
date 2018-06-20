@@ -23,3 +23,24 @@
         width: 100%;
     }
 }
+
+.input_fields_wrap{
+    max-width: 350px;
+}
+.input_fields_wrap input[type=text]{
+    width:100%;
+    margin:2px 0;
+}
+
+.w3-myFont {
+    font-family: "Times New Roman", cursive, sans-serif;
+    font-size: 36px;
+}
+
+.p-style{
+    font-family: "Times New Roman", cursive, sans-serif;
+    margin: 5px;
+}
+#editor-container {
+    height: 375px;
+}

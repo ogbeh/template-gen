@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <title>Chapter One</title>
     <link rel="stylesheet" href="../../css/w3.css">
-ddd
+    <link rel="stylesheet" href="../../css/style.css">
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
     <script src="../../js/sidebar.js"></script>
+    <script src="../../js/main.js"></script>
+
     <style>
-        .w3-myFont {
-            font-family: "Times New Roman", cursive, sans-serif;
-            font-size: 36px;
-        }</style>
+    </style>
 
 </head>
 <body>
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large"
             onclick="w3_close()">Close &times;</button>
-    <a href="index.html" class="w3-bar-item w3-button">Cover Page</a>
+    <a href="title.html" class="w3-bar-item w3-button">Cover Page</a>
     <a href="approval.html" class="w3-bar-item w3-button">Approval</a>
     <a href="chap1.html" class="w3-bar-item w3-button">Chapter One</a>
     <a href="chap2.html " class="w3-bar-item w3-button">Chapter Two</a>
@@ -31,34 +32,68 @@ ddd
 
 <div ng-app="ngLocale" id="main">
 
-    <div class="w3-black">
+    <div class="w3-deep-orange">
         <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
         <div class="w3-container">
             <h1 class="w3-center">Project Generator</h1>
         </div>
     </div>
 
-    <div class="w3-card-4">
-        <div class="w3-container w3-gray">
+    <div class="">
+        <div class="w3-container w3-black">
             <h2 class="w3-center">CHAPTER ONE</h2>
         </div>
-        <form class="w3-container">
+        <div class="row">
+            <div class="column" style="">
+                <h2>INPUT HERE</h2>
+                <div class="input_fields_wrap">
 
-            <label>Background of Study</label>
-            <input class="back-box w3-margin w3-input" type="text" ng-model="back"><br>
+                    <input placeholder="Background of Study:" class="w3-input" ng-model="back" type="text">
 
-            <label>Statement of Problem</label>
-            <input class="stat-box w3-margin w3-input" type="text" ng-model="stat">
-        </form>
+                    <input placeholder="Statement of the Problem:" class="by-box w3-input" type="text" ng-model="stat">
+
+                    <input placeholder="Objectives" class="sub-box w3-input" type="text" ng-model="obj">
+
+                    <input placeholder="Aims:" class="date-box w3-input" type="text" ng-model="aim">
+
+                    <input placeholder="Significance:" class="date-box w3-input" type="text" ng-model="sig">
+
+                    <input placeholder="Scope:" class="date-box w3-input" type="text" ng-model="sco">
+
+                    <input placeholder="Limitations:" class="date-box w3-input" type="text" ng-model="lit">
+
+
+                </div>
+
+                <button type="button" class="add_field_button">Add Field</button>
+                <button type="button" class="remove_field_button">Remove Field</button>
+            </div>
+            <div class="column w3-border-left" style="">
+                <h2 class="w3-center w3-myFont"><strong>Background of Study</strong></h2>
+                <p class="p-title p-style" ng-bind="back">Title:</p>
+
+                <h1 class="w3-center w3-myFont"><strong>Statement of Problem</strong></h1>
+                <p class="w3-center p-style" ng-bind="stat"></p>
+
+                <h1 class="w3-myFont w3-center"><strong>Objectives</strong></h1>
+                <p class="w3-center p-style" ng-bind="obj">Submitted to:</p>
+
+                <h1 class="w3-center w3-myFont"><strong>Aims</strong></h1>
+                <p class="w3-center p-style" ng-bind="aim">Date:</p>
+
+                <h1 class="w3-center w3-myFont"><strong>Significance</strong></h1>
+                <p class="w3-cente p-style" ng-bind="sig">Date:</p>
+
+                <h1 class="w3-center w3-myFont"><strong>Scope </strong></h1>
+                <p class="w3-center p-style" ng-bind="sco">Date:</p>
+
+                <h1 class="w3-center w3-myFont"><strong>Limitation </strong></h1>
+                <p class="w3-center p-style" ng-bind="lit">Date:</p>
+            </div>
+        </div>
     </div>
 
-    <div class="w3-container w3-section">
-        <h1 class="w3-center w3-myFont"><strong>Background of Study</strong></h1>
-        <p class="p1" ng-bind="back"></p>
 
-        <h1 class="w3-myFont w3-center"><strong>Statement of Problem</strong></h1>
-        <p class="p2" ng-bind="stat"></p>
-    </div>
 
 
 </div>

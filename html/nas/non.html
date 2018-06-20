@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter One</title>
+    <link rel="stylesheet" href="../../css/w3.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="../../js/sidebar.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <style>
+    </style>
+
+</head>
+<body>
+<div ng-app="tempApp" ng-controller="myCtrl" id="main">
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button>
+    <a href="title.html" class="w3-bar-item w3-button">Cover Page</a>
+    <a href="approval.html" class="w3-bar-item w3-button">Approval</a>
+    <a href="chap1.html" class="w3-bar-item w3-button">Chapter One</a>
+    <a href="chap2.html " class="w3-bar-item w3-button">Chapter Two</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Three</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Four</a>
+    <a href="#" class="w3-bar-item w3-button">Chapter Five</a>
+</div>
+
+
+
+    <div class="w3-deep-orange">
+        <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1 class="w3-center">Project Generator</h1>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="w3-container w3-black">
+            <h2 class="w3-center">CHAPTER ONE</h2>
+        </div>
+        <div class="row">
+            <div class="column" style="">
+                <h2>INPUT HERE</h2>
+                <div class="input_fields_wrap">
+
+                    <textarea placeholder="Background of Study:" class="w3-input" ng-model="back" type="text"> </textarea>
+
+                    <textarea placeholder="Statement of the Problem:" class="by-box w3-input" type="text" ng-model="stat"></textarea>
+
+                        <textarea placeholder="Objectives" class="sub-box w3-input" type="text" ng-model="obj"></textarea>
+
+                        <textarea placeholder="Aims:" class="date-box w3-input" type="text" ng-model="aim"></textarea>
+
+                        <textarea placeholder="Significance:" class="date-box w3-input" type="text" ng-model="sig"></textarea>
+
+                        <textarea placeholder="Scope:" class="date-box w3-input" type="text" ng-model="sco"></textarea>
+
+                        <textarea placeholder="Limitations:" class="date-box w3-input" type="text" ng-model="lit"></textarea>
+
+
+                </div>
+
+                <button type="button" class="add_field_button">Add Field</button>
+                <button type="button" class="remove_field_button">Remove Field</button>
+
+                <h1>Background of Study</h1>
+                <p>{{back}}</p><br><br>
+            </div>
+            <div class="column w3-border-left" style="">
+                <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+                <!-- Create the editor container -->
+                <div id="editor">
+                    <h1>Background of Study</h1>
+                    <p>{{back}}</p><br><br>
+
+                    <h1>Statement of the Problem</h1>
+                    <p>{{stat}}</p><br><br>
+                    <p><br></p>
+
+                    <h1>Objectives of the Study</h1>
+                    <p ng-bind="obj">Enter text here!</p><br><br>
+                    <p><br></p>
+
+                    <h1>Aims of the Study</h1>
+                    <p>Enter text here!</p><br><br>
+                    <p><br></p>
+
+                    <h1>Significance of the Study</h1>
+                    <p>Enter text here!</p><br><br>
+                    <p><br></p>
+
+                    <h1>Scope of the Study</h1>
+                    <p>Enter text here!</p><br><br>
+                    <p><br></p>
+
+                    <h1>Limitations of the Study</h1>
+                    <p>Enter text here!</p><br><br>
+                    <p><br></p>
+                </div>
+
+
+                <!-- Include the Quill library -->
+                <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+                <!-- Initialize Quill editor -->
+                <script>
+                    var quill = new Quill('#editor', {
+                        theme: 'snow'
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+</body>
+</html>
